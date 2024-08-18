@@ -48,9 +48,3 @@ script.onerror = function () {
 
 // Append the script to the document head
 document.head.appendChild(script);
-
-export function initializeContact() {
-    console.log("Initializing contact page...");
-    // Call the script onload function to set up everything
-    script.onload();
-}
