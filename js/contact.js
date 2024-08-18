@@ -48,3 +48,8 @@ script.onerror = function () {
 
 // Append the script to the document head
 document.head.appendChild(script);
+
+function initializeContact() {
+    // Call the script onload function to set up everything
+    script.onload();
+}
