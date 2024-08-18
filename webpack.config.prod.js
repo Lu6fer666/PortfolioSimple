@@ -8,6 +8,7 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
+      filename: 'index.html',
     }),
     new CopyPlugin({
       patterns: [
@@ -20,6 +21,7 @@ module.exports = merge(common, {
         { from: 'icon.png', to: 'icon.png' },
         { from: '404.html', to: '404.html' },
         { from: 'site.webmanifest', to: 'site.webmanifest' },
+        { from: 'fonts', to: 'fonts' },
       ],
     }),
   ],
