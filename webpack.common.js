@@ -5,12 +5,9 @@ module.exports = {
     app: './js/app.js',
     contact: './js/contact.js',
   },
-  resolve: {
-    extensions: ['.js'],
-  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: './js/[name].js',
+    filename: '[name].bundle.js',
   },
 };
