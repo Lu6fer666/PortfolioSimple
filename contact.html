@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact | Julien Milo</title>
+	<link href="./css/output.css" rel="stylesheet">
+	<style media="screen">
+        [data-barba="container"] {
+            font-family: monospace;
+        }
+        .navbar a {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            color: #ff0000;
+            transition: color 0.3s;
+        }
+	</style>
+</head>
+<body data-barba="wrapper" class="bg-white font-georgia max-w-screen-2xl mx-auto">
+
+
+<header>
+	<div class="relative hidden lg:flex items-center p-4">
+
+		<h1 class="font-semibold font-newyork text-2xl text-left"><a class="cursor-pointer" href="index.html">Julien</a></h1>
+
+	</div>
+
+
+	<h1 class="text-3xl p-4 font-semibold font-newyork lg:hidden"><a class="cursor-pointer" href="index.html">Julien</a></h1>
+</header>
+<main data-barba="container" data-barba-namespace="contact" >
+	<section class="contact pt-8 mx-auto text-center max-w-lg">
+		<h2  class="text-3xl mb-6">Contact Me</h2>
+		<form id="contact-form" class="text-left flex flex-col items-center space-y-4">
+			<div class="form-group w-full">
+				<label class="text-lg" for="name">Name</label>
+				<input class="w-full mt-1 border rounded-sm border-zinc-600 placeholder-zinc-400 pl-2 py-2 hover:border-b-2 active:border" id="name" name="name" placeholder="Your Name" required type="text">
+			</div>
+			<div class="form-group w-full">
+				<label class="text-lg" for="email">Email</label>
+				<input class="w-full mt-1 border rounded-sm border-zinc-600 placeholder-zinc-400 pl-2 py-2 hover:border-b-2 active:border" id="email" name="email" placeholder="Your Email" required type="email">
+			</div>
+			<div class="form-group w-full">
+				<label class="text-lg" for="person">You are</label>
+				<select class="w-full mt-1 border rounded-sm border-zinc-600 placeholder-zinc-400 pl-2 py-2 hover:border-b-2 active:border" id="person" name="person" required>
+					<option disabled selected value="">Select your role</option>
+					<option value="recruiter">Recruiter</option>
+					<option value="client">Potential Client</option>
+					<option value="student">Student or Intern</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			<div class="form-group w-full">
+				<label class="text-lg" for="message">Message</label>
+				<textarea class="w-full mt-1 border rounded-sm border-zinc-600 placeholder-zinc-400 pl-2 py-2 hover:border-b-2 active:border" id="message" name="message" placeholder="Your Message" required rows="5"></textarea>
+			</div>
+			<button class="bg-black transition ease-in text-white rounded-md px-5 py-1.5 mr-8 hover:cursor-pointer hover:bg-zinc-900" type="submit">Send Message</button>
+		</form>
+		<p id="form-status" class="mt-4"></p>
+	</section>
+
+
+</main>
+</body>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="dist/js/app.js"></script>
+<script src="dist/js/contact.js"></script>
+
+</html>
