@@ -1,3 +1,7 @@
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
+
 function initializeScrollTriggers() {
     const scrollTriggers = document.querySelectorAll('.nav-link, .scroll-button');
     scrollTriggers.forEach(trigger => {
